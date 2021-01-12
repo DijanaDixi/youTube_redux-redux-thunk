@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Player from "./components/Player/Player";
+import Search from "./components/Search/Search";
+import PreviouslyVisitedVideos from "./components/PreviouslyVisetedVideos/PreviouslyVisetedVideos";
+import VideoList from "./components/VideoList/VideoList";
+import {useSelector} from "react-redux"
 
 function App() {
+
+  const videos=useSelector((state)=>state.videos)
+  console.log(videos)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+      <div className="container">
+        <Search />
+        <div className="row">
+          <div className="col-md-8">
+            
+            {videos.length>0?<Player />:null}
+            <PreviouslyVisitedVideos />
+          </div>
+          <div className="col-md-4">
+            <VideoList />
+          </div>
+        </div>
+      </div>
+  
   );
 }
 

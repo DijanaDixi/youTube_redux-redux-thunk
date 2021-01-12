@@ -1,0 +1,17 @@
+.imgDetails {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.details {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+span {
+    vertical-align: top;
+}
+hr{
+    margin: 7!important;
+}
