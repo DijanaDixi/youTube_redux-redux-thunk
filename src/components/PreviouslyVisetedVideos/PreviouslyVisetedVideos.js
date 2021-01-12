@@ -24,9 +24,9 @@ function PreviouslyVisitedVideos() {
           <hr className="w-25" />
         </div>
       ) : null}
-      <div className="row">
+      {/* <div className="row"> */}
       {history}
-      </div>
+      {/* </div> */}
      
     </>
   );
